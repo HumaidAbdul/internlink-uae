@@ -5,7 +5,7 @@ import axios from 'axios';
 const API_BASE_URL = "https://interlinkuae.onrender.com";
 
 const api = axios.create({
-  baseURL: 'https://interlinkuae.onrender.com/api',
+  baseURL: 'https://interlinkuae.onrender.com',
   // لو ما تستخدم كوكيز، مش لازم withCredentials
   // withCredentials: true,
 });
