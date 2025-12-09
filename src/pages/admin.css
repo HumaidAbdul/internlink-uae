@@ -1,0 +1,49 @@
+/* src/pages/admin.css */
+:root{
+  --brand:#0d5aa2; --accent:#19b5c6; --bg:#eaf3ff; --surface:#ffffff;
+  --text:#0f172a; --muted:#64748b; --border:#e5eef7;
+  --shadow:0 10px 24px rgba(13,90,162,.08);
+  --danger:#e11d48; --success:#16a34a;
+}
+
+.admin{ background:var(--bg); min-height:100vh; padding:28px 0 48px; }
+.admin__wrap{ width:100%; max-width:1000px; margin:0 auto; padding:0 16px; }
+.admin__title{ text-align:center; font-weight:800; font-size:28px; color:var(--text);
+  background:var(--surface); padding:14px 0; border-radius:12px; box-shadow:var(--shadow); margin-bottom:16px; }
+
+.tabs{ display:flex; gap:10px; justify-content:center; margin:10px 0 18px; }
+.tab{ background:#0f3e78; color:#fff; border:none; padding:10px 16px; border-radius:8px;
+  cursor:pointer; font-weight:700; opacity:.85; }
+.tab--active{ background:var(--brand); opacity:1; }
+
+.panel{ background:var(--surface); border:1px solid var(--border); border-radius:14px;
+  box-shadow:var(--shadow); padding:18px; margin-bottom:18px; }
+.panel--chart{ padding:16px 10px 8px; }
+.panel__title{ text-align:center; margin:4px 0 8px; color:var(--text); font-weight:800 }
+.chart__box{ padding:8px 12px }
+
+.table{ width:100%; border-collapse:separate; border-spacing:0; background:#fff }
+.table thead th{ background:#0e345f; color:#fff; text-align:left; padding:12px 14px; font-weight:700; }
+.table tbody td{ padding:12px 14px; border-bottom:1px solid var(--border); color:var(--text) }
+.table__header{ background:#0e345f; color:#fff; padding:12px 14px; border-radius:10px 10px 0 0; font-weight:800; margin-bottom:8px; }
+.empty{ color:var(--muted); text-align:center; padding:24px; }
+
+.badge{ display:inline-block; padding:4px 10px; border-radius:999px; font-size:12px; font-weight:700 }
+.badge--pending{ background:#fff7ed; color:#a16207; border:1px solid #fed7aa }
+
+.actions{ display:flex; gap:10px }
+.btn{ border:none; padding:8px 12px; border-radius:8px; color:#fff; font-weight:700; cursor:pointer; }
+.btn--approve{ background:var(--success) }
+.btn--reject{ background:var(--danger) }
+.btn--ghost{ background:#eef2ff; color:#111827 }
+
+.loading{ text-align:center; color:var(--muted); margin-top:12px }
+
+/* modal */
+.modal__backdrop{ position:fixed; inset:0; background:rgba(15,23,42,.35); display:flex; align-items:center; justify-content:center; z-index:50; }
+.modal{ width:100%; max-width:520px; background:#fff; border-radius:12px; box-shadow:var(--shadow); padding:18px; }
+.modal__title{ margin:0 0 10px; font-size:18px; font-weight:800; }
+.modal__title span{ color:var(--brand); }
+.modal__field{ display:flex; flex-direction:column; gap:6px; margin:8px 0 12px; }
+.modal__field textarea{ min-height:90px; padding:10px; border:1px solid var(--border); border-radius:8px; resize:vertical; }
+.modal__actions{ display:flex; justify-content:flex-end; gap:10px; }
