@@ -5,7 +5,7 @@ import axios from 'axios';
 const API_BASE_URL = "https://interlinkuae.onrender.com";
 
 export const api = axios.create({
-  baseURL: API_BASE_URL + "/api",
+  baseURL: API_BASE_URL
 });
 
 // after creating the axios instance
