@@ -229,11 +229,18 @@ export default function AdminDirectory() {
     table-layout:fixed;/  }
 
   /* توزيع عرض الأعمدة: يشتغل لكل الجداول (Users / Internships / Applications) */
-  th:nth-child(1), td:nth-child(1){ width:38%; }
+  th:nth-child(1), td:nth-child(1){ width:40%; }
   th:nth-child(2), td:nth-child(2){ width:28%; }
   th:nth-child(3), td:nth-child(3){ width:16%; }
   th:nth-child(4), td:nth-child(4){ width:12%; text-align:center; }
   th:nth-child(5), td:nth-child(5){ width:12%; text-align:center; }
+
+
+td {
+  white-space: normal !important;
+  word-break: break-word !important;
+}
+
 
   /* منع تقطيع الكلمات + إظهار ... لو النص طويل */
   th, td{
