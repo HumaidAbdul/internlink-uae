@@ -227,12 +227,13 @@ export default function AdminDirectory() {
     border-collapse:collapse;
     font-size:13px;
   }
-  th,td{
-    padding:8px 10px;
-    text-align:left;
-    white-space:normal;
-    word-break:break-word;
-  }
+th,td{
+  padding:8px 10px;
+  text-align:left;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;s
+}
   thead{
     background:#0f2b63;
     color:#fff;

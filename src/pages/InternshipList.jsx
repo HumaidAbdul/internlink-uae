@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import api from '../lib/api';
 import FilterBarHorizontal from '../components/FilterSidebar.jsx';
 import pinIcon from './img/pin.png';
 
@@ -22,22 +22,20 @@ export default function InternshipList() {
   });
   const [error, setError] = useState('');
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const token = localStorage.getItem('token');
-        const res = await axios.get('http://localhost:5001/api/internship/all', {
-          headers: token ? { Authorization: `Bearer ${token}` } : {}
-        });
-        setInternships(res.data?.internships || []);
-        setError('');
-      } catch {
-        setError('Failed to load internships');
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
+useEffect(() => {
+  (async () => {
+    try {
+      const res = await api.get('/internship/all');
+      setInternships(res.data?.internships || []);
+      setError('');
+    } catch (err) {
+      console.error(err);
+      setError('Failed to load internships');
+    } finally {
+      setLoading(false);
+    }
+  })();
+}, []);
 
   const isUnset = (v) => v === '' || v === 'All';
   const same = (a, b) =>
