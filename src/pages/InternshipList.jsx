@@ -25,7 +25,7 @@ export default function InternshipList() {
 useEffect(() => {
   (async () => {
     try {
-      const res = await api.get('/internship/all');
+      const res = await api.get('/api/internship/all');
       setInternships(res.data?.internships || []);
       setError('');
     } catch (err) {
