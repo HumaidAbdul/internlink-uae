@@ -229,8 +229,8 @@ export default function AdminDirectory() {
     table-layout:fixed;/  }
 
   /* توزيع عرض الأعمدة: يشتغل لكل الجداول (Users / Internships / Applications) */
-  th:nth-child(1), td:nth-child(1){ width:34%; }
-  th:nth-child(2), td:nth-child(2){ width:26%; }
+  th:nth-child(1), td:nth-child(1){ width:38%; }
+  th:nth-child(2), td:nth-child(2){ width:28%; }
   th:nth-child(3), td:nth-child(3){ width:16%; }
   th:nth-child(4), td:nth-child(4){ width:12%; text-align:center; }
   th:nth-child(5), td:nth-child(5){ width:12%; text-align:center; }
@@ -258,6 +258,14 @@ export default function AdminDirectory() {
     background:#0f2b63;
     color:#fff;
   }
+
+  tbody tr {
+  height: 48px;
+}
+
+td {
+  padding-right: 16px;
+}
 
   tbody tr:nth-child(even){background:#f9fafb;}
   tbody tr:nth-child(odd){background:#fff;}
